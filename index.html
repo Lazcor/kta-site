@@ -377,6 +377,9 @@ section{padding-block:clamp(64px,9vw,104px)}
 /* matching cards */
 .story,.cgroup,.eprods div,.case,.channels,.roster li,.tstep,.door{border-radius:14px}
 .method .steps li{border-top-color:var(--band)}
+
+.coaches.path2 .story{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:860px){.coaches.path2 .story{grid-template-columns:1fr}}
 </style>
 
 </head>
@@ -426,7 +429,6 @@ section{padding-block:clamp(64px,9vw,104px)}
 
       <div class="cta-row">
         <a class="btn aqua" id="hero-book" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Book a strategy call →</a>
-        <a class="btn ghost" id="hero-how" href="#method">See how we do it ↓</a>
       </div>
     </div>
   </section>
@@ -445,8 +447,8 @@ section{padding-block:clamp(64px,9vw,104px)}
           <span class="go"><i aria-hidden="true">→</i>Enterprise path</span>
         </a>
         <a class="door coach" id="route-sme" href="#coaches">
-          <h3>Coaches &amp; Subject Matter Experts</h3>
-          <p>For coaches, consultants, and SMEs. Grow the digital business behind your expertise.</p>
+          <h3>Coaches &amp; Consultants</h3>
+          <p>Grow the digital business behind your expertise.</p>
           <ul class="dprods"><li>Digital Business Coaching for Coaches</li></ul>
           <span class="go"><i aria-hidden="true">→</i>Coaches path</span>
         </a>
@@ -490,25 +492,8 @@ section{padding-block:clamp(64px,9vw,104px)}
       <div class="pathsub">
         <h3 class="psub-h">What we create</h3>
       <div class="create">
-        <div class="cgroup">
-          <h3>Intelligence</h3>
-          <p class="csub">Turn scattered information into decisions leaders can act on.</p>
-          <ul>
-            <li><b>Knowledge Management</b><span>Capture what your people know and make it findable, usable, and current.</span></li>
-            <li><b>Business Intelligence and Data Analytics</b><span>Clear data and insight for faster, better decisions.</span></li>
-            <li><b>Digital Transformation and AI</b><span>AI-enabled roadmaps and workflows built for your people.</span></li>
-          </ul>
-        </div>
-        <div class="cgroup">
-          <h3>Assets</h3>
-          <p class="csub">Turn expertise into something you own, teach, and sell.</p>
-          <ul>
-            <li><b>Training and Curriculum Development</b><span>Programs and train-the-trainer certifications that scale performance.</span></li>
-            <li><b>Learning Management System and Academy Building</b><span>One place where teams, partners, and customers log in and learn.</span></li>
-            <li><b>Sales, Marketing and Training Content</b><span>Content that sells, onboards, and teaches in one consistent voice.</span></li>
-          </ul>
-          <p class="cformats">Webinars. eBooks. Audio and Video content. Coursework. Workshops. Seminars. Retreats. Academies. Apps.</p>
-        </div>
+        <div class="cgroup"><h3>Intelligence</h3><p class="csub">Knowledge management, business intelligence, and AI that help leaders decide faster.</p></div>
+        <div class="cgroup"><h3>Assets</h3><p class="csub">Training, academies, and content your organization owns, teaches, and scales.</p></div>
       </div>
       </div>
       <div class="cta-row">
@@ -520,7 +505,7 @@ section{padding-block:clamp(64px,9vw,104px)}
   <section class="coaches path2" id="coaches">
     <div class="wrap">
       <div class="head center">
-        <p class="label">Path 2 · Subject Matter Experts &amp; Coaches</p>
+        <p class="label">Path 2 · Coaches &amp; Consultants</p>
         <h2>Digital Business Coaching for Coaches</h2>
         <p class="lede">You're great at what you do. Your business still runs on your hours.</p>
       </div>
@@ -538,14 +523,6 @@ section{padding-block:clamp(64px,9vw,104px)}
           <span class="tag">The solution</span>
           <h3>We grow the digital business around your expertise.</h3>
           <p>We teach you the systems and strategies that improve your sales, marketing, customer journey, and offers. More revenue streams. More profit.</p>
-        </div>
-        <div class="pf">
-          <span class="tag">The proof</span>
-          <h3>Built with experts like you.</h3>
-          <ul>
-            <li><b>1,300+</b> coaches worked with</li>
-            <li>Businesses grown for celebrity trainers and NYT bestsellers</li>
-          </ul>
         </div>
       </div>
       <div class="channels">
@@ -570,11 +547,11 @@ section{padding-block:clamp(64px,9vw,104px)}
         <p class="lede">Five stages move what you know from information to value. Nothing gets rebuilt from scratch.</p>
       </div>
       <ol class="steps">
-        <li><b>Gather</b><span>Knowledge, data, expertise, and materials get collected first. What's missing gets found.</span></li>
-        <li><b>Filter and Organize</b><span>Raw information becomes a clear, logical framework. What doesn't matter gets cut.</span></li>
-        <li><b>Communicate</b><span>The work gets translated into the language, visuals, and formats the audience needs.</span></li>
-        <li><b>Create</b><span>Intelligence and assets get built. A program, an academy, a framework. Made to be used.</span></li>
-        <li><b>Capitalize</b><span>The asset gets priced, packaged, and deployed to produce measurable value.</span></li>
+        <li><b>Gather</b><span>Collect what already exists.</span></li>
+        <li><b>Filter and Organize</b><span>Turn raw information into a clear framework.</span></li>
+        <li><b>Communicate</b><span>Translate it for the people who need it.</span></li>
+        <li><b>Create</b><span>Build the asset.</span></li>
+        <li><b>Capitalize</b><span>Package and deploy it for measurable value.</span></li>
       </ol>
     </div>
   </section>
@@ -618,17 +595,6 @@ section{padding-block:clamp(64px,9vw,104px)}
           <p class="res">5,000+ professionals trained</p>
         </article>
       </div>
-      <p class="roster-h">The rooms this work was built for</p>
-      <ul class="roster dark">
-        <li>Top Personal Development Companies</li>
-        <li>Top Ranked Speakers</li>
-        <li>NYT Bestsellers</li>
-        <li>Olympic Gold Medal Coaches</li>
-        <li>Military Training</li>
-        <li>Fortune 100 Partners</li>
-        <li>Private Equity Businesses</li>
-        <li>Start-Ups and SMBs</li>
-      </ul>
     </div>
   </section>
 
@@ -639,11 +605,9 @@ section{padding-block:clamp(64px,9vw,104px)}
         <p class="name">Laz Corp</p>
         <p class="role">Founder and Principal, Knowledge Transfer Advisors</p>
         <p class="t">I am an Information Nerd. Military Intelligence taught me to turn incomplete information into actionable intelligence. Corporate training taught me to turn knowledge into performance. Digital products taught me scale.</p>
-        <p class="t">My career is a skill stack, not a straight line. Every role added a capability. Now I help organizations and coaches turn what they know into value.</p>
         <ul class="creds">
-          <li><span>Education</span><span>MS in Information and Knowledge Strategy, AI concentration, Columbia University. MBA in Digital Business Management.</span></li>
-          <li><span>Columbia</span><span>Future Leader of AI Delegate and speaker on Operationalizing Responsible AI.</span></li>
-          <li><span>Certifications</span><span>Stanford Generative AI (4 courses). Amazon AWS Cloud and IT. Certified AI Consultant, Workflow Optimization.</span></li>
+          <li><span>Education</span><span>MS in Information and Knowledge Strategy, AI concentration, Columbia University, and Future Leader of AI Delegate. MBA in Digital Business Management.</span></li>
+                    <li><span>Certifications</span><span>Stanford Generative AI (4 courses). Amazon AWS Cloud and IT. Certified AI Consultant, Workflow Optimization.</span></li>
           <li><span>Beyond work</span><span>Blackbelt instructor. Ironman finisher. Public speaker.</span></li>
         </ul>
       </div>

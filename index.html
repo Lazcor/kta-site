@@ -490,8 +490,8 @@ section{padding-block:clamp(64px,9vw,104px)}
 .method .steps.chevs::before,.method .steps.chevs::after{display:none!important}
 .method .steps.chevs li{padding:0;text-align:center;align-items:stretch;gap:14px}
 .method .steps.chevs li::before{display:none!important}
-.chev{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:96px;padding:14px 30px 14px 40px;background:var(--band);color:var(--on-band);clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%);margin-right:-14px}
-.steps.chevs li:first-child .chev{clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%);padding-left:22px;border-radius:12px 0 0 12px}
+.chev{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:96px;padding:14px 30px 14px 40px;background:var(--band);color:var(--on-band);clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%);margin-right:-19px}
+.steps.chevs li:first-child .chev{}
 .steps.chevs li:nth-child(2) .chev{background:#13305F}
 .steps.chevs li:nth-child(3) .chev{background:#1E4FBF}
 .steps.chevs li:nth-child(4) .chev{background:#2F6FD6}
@@ -512,6 +512,15 @@ section{padding-block:clamp(64px,9vw,104px)}
 .plist li{margin:0!important;display:flex;flex-direction:column;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
 .plist li b{font-weight:800;font-size:17px;color:var(--ink)}
 .plist li span{font-size:15.5px;color:var(--soft);line-height:1.45}
+
+/* stacked problem over solution */
+.story.two,.coaches.path2 .story,.coaches .story{grid-template-columns:1fr!important;max-width:820px;margin-left:auto;margin-right:auto}
+.story > div + div{border-left:0!important;border-top:1px solid var(--line)!important;padding-top:28px!important;margin-top:20px}
+.story > div{padding-left:0!important;padding-right:0!important}
+.story .pb h3{color:#B4472E}
+.story .pb ul{list-style:none;padding-left:0}
+.story .pb li{position:relative;padding-left:22px}
+.story .pb li::before{content:"\2013";position:absolute;left:0;top:0;color:#B4472E;font-weight:800}
 </style>
 
 </head>
@@ -549,7 +558,7 @@ section{padding-block:clamp(64px,9vw,104px)}
         <span class="tarrow" aria-hidden="true">→</span>
         <div class="tstep end">
           <h3>Value</h3>
-          <p>More revenue, stronger performance, and a business that scales.</p>
+          <p>More revenue, stronger performance, and a business that scales through improved marketing, sales, operations, and leadership.</p>
         </div>
       </div>
 
@@ -563,7 +572,7 @@ section{padding-block:clamp(64px,9vw,104px)}
     <div class="wrap">
       <div class="head center">
         <p class="label">Who we serve</p>
-        <h2>Choose your expertise.</h2>
+        <h2>Which are you?</h2>
       </div>
       <div class="doors">
         <a class="door ent" id="route-enterprise" href="#enterprise">
@@ -585,7 +594,7 @@ section{padding-block:clamp(64px,9vw,104px)}
       <div class="head center">
         <p class="label">Enterprise Experts</p>
         <h2>Scale your knowledge into business intelligence that increases value.</h2>
-        <p class="for-line">For enterprise businesses and executive leaders</p>
+        <p class="for-line">For enterprise businesses, executive leaders, and subject matter experts</p>
       </div>
       <div class="story two">
         <div class="pb">
@@ -596,6 +605,7 @@ section{padding-block:clamp(64px,9vw,104px)}
             <li>Training doesn't stick</li>
             <li>Teams repeat the same mistakes</li>
             <li>Data is everywhere and decisions still stall</li>
+            <li>When experts leave, what they know leaves with them</li>
           </ul>
         </div>
         <div class="sl">
@@ -653,7 +663,7 @@ section{padding-block:clamp(64px,9vw,104px)}
           <li>Connect the dots</li><li>Referrals</li><li>Revenue streams</li><li>Automation</li><li>Leveraging AI</li>
         </ul>
         <div class="cta-row" style="margin-top:20px">
-          <a class="btn aqua" id="coach-check" href="/check.html">Take the Knowledge Check →</a>
+          <a class="btn aqua" id="coach-check" href="/check.html">Test Your Ecosystem →</a>
         </div>
       </div>
     </div>
@@ -685,7 +695,7 @@ section{padding-block:clamp(64px,9vw,104px)}
         <div><dt>16+</dt><dd>years transferring knowledge</dd></div>
         <div><dt>1,300+</dt><dd>coaches worked with</dd></div>
         <div><dt>5,000+</dt><dd>professionals trained</dd></div>
-        <div><dt>$24M+</dt><dd>in 18 months across a franchise coach network</dd></div>
+        <div><dt>$24M+</dt><dd>in 18 months</dd></div>
         <div><dt>$105M+</dt><dd>in growth across 20+ organizations advised</dd></div>
       </dl>
       <p class="roster-h" style="margin-top:0">Examples of real success</p>

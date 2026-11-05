@@ -484,6 +484,27 @@ section{padding-block:clamp(64px,9vw,104px)}
 @media (min-width:1101px){.eprods div:nth-child(2){border-left:1px solid var(--line)!important}}
 
 .impact h2.res-h{font-size:clamp(40px,6.4vw,64px)}
+
+/* continuous arrow boxes */
+.method .steps.chevs{gap:0}
+.method .steps.chevs::before,.method .steps.chevs::after{display:none!important}
+.method .steps.chevs li{padding:0;text-align:center;align-items:stretch;gap:14px}
+.method .steps.chevs li::before{display:none!important}
+.chev{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:96px;padding:14px 30px 14px 40px;background:var(--band);color:var(--on-band);clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%);margin-right:-14px}
+.steps.chevs li:first-child .chev{clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%);padding-left:22px;border-radius:12px 0 0 12px}
+.steps.chevs li:nth-child(2) .chev{background:#13305F}
+.steps.chevs li:nth-child(3) .chev{background:#1E4FBF}
+.steps.chevs li:nth-child(4) .chev{background:#2F6FD6}
+.steps.chevs li:nth-child(5) .chev{background:var(--aqua);color:var(--on-aqua)}
+.chev em{font-style:normal;font-weight:800;font-size:13px;letter-spacing:.08em;opacity:.8}
+.chev b{font-weight:800;font-size:17px;line-height:1.2;color:inherit}
+.steps.chevs li > span{padding:0 18px 0 22px;font-size:15.5px}
+@media (max-width:960px){
+  .method .steps.chevs{gap:10px}
+  .method .steps.chevs li{padding-left:0!important;min-height:0}
+  .chev,.steps.chevs li:first-child .chev{clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),50% 100%,0 calc(100% - 16px));border-radius:0;margin:0;padding:16px 16px 30px;min-height:0}
+  .steps.chevs li > span{padding:0 8px 8px}
+}
 </style>
 
 </head>
@@ -597,12 +618,12 @@ section{padding-block:clamp(64px,9vw,104px)}
       <div class="head center">
         <p class="label">Coaches</p>
         <h2>Digital Business Ecosystem for Coaches</h2>
-        <p class="lede">You're great at what you do. Your business still runs on your hours.</p>
       </div>
       <div class="story">
         <div class="pb">
           <span class="tag">The problem</span>
           <h3>Your income stops when you stop.</h3>
+          <p>You're great at what you do. Your business still runs on your hours.</p>
           <ul>
             <li>Leads go cold before they buy</li>
             <li>One offer, one price, one way to work with you</li>
@@ -643,12 +664,12 @@ section{padding-block:clamp(64px,9vw,104px)}
         <h2>How we transfer knowledge.</h2>
         <p class="lede">Five stages move what you know from information to value.</p>
       </div>
-      <ol class="steps">
-        <li><b>Gather</b><span>Collect what already exists.</span></li>
-        <li><b>Filter and Organize</b><span>Turn raw information into a clear framework.</span></li>
-        <li><b>Communicate</b><span>Translate it for the people who need it.</span></li>
-        <li><b>Create</b><span>Build the asset.</span></li>
-        <li><b>Capitalize</b><span>Package and deploy it for measurable value.</span></li>
+      <ol class="steps chevs">
+        <li><div class="chev"><em>1</em><b>Gather</b></div><span>Collect what already exists.</span></li>
+        <li><div class="chev"><em>2</em><b>Filter and Organize</b></div><span>Turn raw information into a clear framework.</span></li>
+        <li><div class="chev"><em>3</em><b>Communicate</b></div><span>Translate it for the people who need it.</span></li>
+        <li><div class="chev"><em>4</em><b>Create</b></div><span>Build the asset.</span></li>
+        <li><div class="chev"><em>5</em><b>Capitalize</b></div><span>Package and deploy it for measurable value.</span></li>
       </ol>
     </div>
   </section>

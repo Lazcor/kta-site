@@ -467,6 +467,18 @@ section{padding-block:clamp(64px,9vw,104px)}
   .method .steps li{text-align:left;align-items:flex-start;padding-left:70px;min-height:46px}
   .method .steps li::before{position:absolute;left:0;top:0;margin:0}
 }
+
+/* product solution grids */
+.eprods{grid-template-columns:repeat(5,minmax(0,1fr))!important}
+.eprods div{border-left:1px solid var(--line)!important}
+.eprods div:first-child{border-left:0!important}
+@media (max-width:1100px){.eprods{grid-template-columns:repeat(2,minmax(0,1fr))!important}.eprods div{border-left:0!important}}
+@media (max-width:520px){.eprods{grid-template-columns:1fr!important}}
+.cprod{max-width:720px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:8px;padding:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cprod b{font-weight:800;font-size:clamp(20px,2.4vw,24px)}
+.cprod span{color:var(--soft);font-size:17px;line-height:1.5}
+.coaches.path2 .channels{margin-top:clamp(28px,4vw,40px)}
+.hero-v3 .kline.one{margin-top:0;font-size:clamp(32px,5.4vw,56px);line-height:1.08;letter-spacing:-.02em;max-width:22ch}
 </style>
 
 </head>
@@ -489,8 +501,7 @@ section{padding-block:clamp(64px,9vw,104px)}
 
   <section class="hero hero-v3">
     <div class="wrap">
-      <h1 class="kname"><span class="gold">Knowledge</span> <span class="navy">Transfer</span> <span class="sky">Advisors</span></h1>
-      <p class="kline one">We turn your information and knowledge into intelligence and assets that produce more profit.</p>
+      <h1 class="kline one">We turn your information and knowledge into intelligence and assets that produce more profit.</h1>
 
       <div class="transfer" aria-label="How knowledge becomes value">
         <div class="tstep">
@@ -560,9 +571,10 @@ section{padding-block:clamp(64px,9vw,104px)}
         </div>
       </div>
       <div class="pathsub">
+        <h3 class="psub-h">Our Product Solution</h3>
 
         <div class="eprods">
-          <div class="feat"><b>Proprietary Design</b><span>Knowledge systems, business intelligence, and AI platforms designed around your organization's own expertise, so leaders decide faster.</span></div>
+          <div><b>Proprietary Design</b><span>Knowledge systems, business intelligence, and AI platforms designed around your organization's own expertise, so leaders decide faster.</span></div>
           <div><b>Executive Advisory</b><span>Strategy sessions with leaders on knowledge, AI, and information transformation.</span></div>
           <div><b>Workshops</b><span>Hands-on sessions that turn your team's expertise into a shared method.</span></div>
           <div><b>Build Outs</b><span>Learning management systems, curriculum, training, academies, and content your organization owns, teaches, and scales.</span></div>
@@ -596,6 +608,13 @@ section{padding-block:clamp(64px,9vw,104px)}
           <span class="tag">The solution</span>
           <h3>We grow the digital business around your expertise.</h3>
           <p>We teach you the systems and strategies that improve your sales, marketing, customer journey, and offers. More revenue streams. More profit.</p>
+        </div>
+      </div>
+      <div class="pathsub">
+        <h3 class="psub-h">Our Product Solution</h3>
+        <div class="cprod">
+          <b>Digital Business Ecosystem for Coaches</b>
+          <span>The systems top coaches already leverage, built into your business. Offers, funnels, follow-up, academy, community, and automation that grow your revenue without more hours.</span>
         </div>
       </div>
       <div class="channels">

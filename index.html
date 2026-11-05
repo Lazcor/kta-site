@@ -427,6 +427,10 @@ section{padding-block:clamp(64px,9vw,104px)}
 .head{margin-bottom:clamp(36px,6vw,56px)}
 
 .create:has(.cgroup:only-child){grid-template-columns:1fr;max-width:620px;margin-inline:auto}
+
+.flinks{display:flex;gap:20px}
+.lin{font-weight:700;color:var(--teal);text-decoration:none}
+.lin:hover{text-decoration:underline}
 </style>
 
 </head>
@@ -639,8 +643,9 @@ section{padding-block:clamp(64px,9vw,104px)}
     <div class="wrap about solo">
       <div class="bio">
         <p class="label">Founder</p>
-        <p class="name">Laz Corp</p>
+        <p class="name">Laz Cor</p>
         <p class="role">Founder and Principal, Knowledge Transfer Advisors</p>
+        <p class="t"><a class="lin" href="https://www.linkedin.com/in/laz-cor-ai/" target="_blank" rel="noopener">Connect on LinkedIn →</a></p>
         <p class="t">I am an Information Nerd. Military Intelligence taught me to turn incomplete information into actionable intelligence. Corporate training taught me to turn knowledge into performance. Digital products taught me scale.</p>
         <ul class="creds">
           <li><span>Education</span><span>MS in Information and Knowledge Strategy, AI concentration, Columbia University, and Future Leader of AI Delegate. MBA in Digital Business Management.</span></li>
@@ -666,8 +671,8 @@ section{padding-block:clamp(64px,9vw,104px)}
 
 <footer>
   <div class="wrap">
-    <span>Knowledge Transfer Advisors · Founded by Laz Corp</span>
-    <span><a href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Book a call</a></span>
+    <span>Knowledge Transfer Advisors</span>
+    <span class="flinks"><a href="https://www.linkedin.com/in/laz-cor-ai/" target="_blank" rel="noopener">LinkedIn</a><a href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Book a call</a></span>
   </div>
 </footer>
 

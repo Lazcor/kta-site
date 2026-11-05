@@ -625,7 +625,7 @@ footer .mono{font-size:10.5px}
           </div>
           <p class="result" id="result"></p>
           <p class="result-note" id="copy-note">Paste your answers into the booking form.</p>
-          <p class="preview mono">Preview · Nothing was sent</p>
+          
         </div>
       </div>
 
@@ -677,7 +677,7 @@ footer .mono{font-size:10.5px}
               <a class="btn aqua" id="book-go" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener" hidden>Pick your time →</a>
               <span class="note" id="gate-note">Next you'll pick a time on the calendar.</span>
             </div>
-            <p class="preview mono">Preview · This form is not connected yet, so nothing is sent</p>
+            
           </form>
         </div>
       </div>
@@ -1204,6 +1204,23 @@ footer .mono{font-size:10.5px}
   var NOTE = $('copy-note').textContent;
   var GATE_NOTE = $('gate-note').textContent;
 
+  var LEAD_TO = 'https://formsubmit.co/ajax/raizupaibiz@gmail.com';
+  function sendLead(kind, extra){
+    var s = summary();
+    var data = {
+      _subject: 'New Knowledge Check lead (' + kind + ')',
+      _template: 'table',
+      _captcha: 'false',
+      Form: kind,
+      Score: s.yes + ' of ' + N + ' systems in place',
+      Missing: s.gaps.join(', ') || 'None'
+    };
+    for(var k in extra){ if(extra[k]) data[k] = extra[k]; }
+    try{
+      fetch(LEAD_TO, {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(data)}).catch(function(){});
+    }catch(e){}
+  }
+
   function summary(){
     var yes = 0, answered = 0, gaps = [];
     state.forEach(function(v,i){
@@ -1356,6 +1373,14 @@ footer .mono{font-size:10.5px}
       return;
     }
     lead.name = name.split(/\s+/)[0];
+    sendLead('Book a call', {
+      Name: name,
+      Email: email,
+      Business: $('lead-biz').value.trim(),
+      Phone: $('lead-phone').value.trim(),
+      'Meet by': form.meet,
+      _replyto: email
+    });
     note.textContent = form.meet === 'Text' ? 'Last step, pick a time and we will text you.' : 'Last step, pick your time for the ' + form.meet.toLowerCase() + '.';
     $('lead-go').hidden = true;
     $('book-go').hidden = false;
@@ -1382,6 +1407,7 @@ footer .mono{font-size:10.5px}
     $('lead-email').value = email;
     lead.name = $('lead-name').value.trim().split(/\s+/)[0] || '';
     unlocked = true;
+    sendLead('Digital Business Plan download', {Email: email, _replyto: email});
     render();
     $('unlocked').scrollIntoView({block:'start'});
   });

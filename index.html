@@ -322,6 +322,13 @@ body::before{background:var(--band)}
 
 .kdiv{display:block;width:56px;height:3px;border-radius:2px;background:var(--aqua);margin:28px auto 0}
 .hero-v3 .kdef{margin-top:24px;color:var(--muted)}
+
+.prods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.prod{border:1.5px solid var(--line);border-radius:14px;padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:10px;align-items:flex-start;min-width:0}
+.prod h3{font-weight:800;font-size:clamp(22px,2.8vw,28px);line-height:1.15}
+.prod p{color:var(--soft);font-size:17px;line-height:1.5}
+.prod .btn{margin-top:auto}
+@media (max-width:760px){.prods{grid-template-columns:1fr}}
 </style>
 
 </head>
@@ -566,6 +573,27 @@ body::before{background:var(--band)}
         </ul>
         <div class="cta-row" style="margin-top:20px">
           <a class="btn aqua" id="coach-check" href="/check.html">Take the Knowledge Check →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="head center">
+        <p class="label">Products</p>
+        <h2>Our products.</h2>
+      </div>
+      <div class="prods">
+        <div class="prod">
+          <h3>Proprietary Design</h3>
+          <p>Knowledge systems, programs, and platforms designed around your organization's own expertise.</p>
+          <a class="btn ink" id="prod-design" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Book a call →</a>
+        </div>
+        <div class="prod">
+          <h3>Digital Business Coaching for Coaches</h3>
+          <p>We grow the digital business behind coaches, consultants, and SMEs. More revenue streams. More profit.</p>
+          <a class="btn aqua" id="prod-dbc" href="/check.html">Take the Knowledge Check →</a>
         </div>
       </div>
     </div>

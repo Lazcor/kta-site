@@ -352,6 +352,31 @@ body::before{background:var(--band)}
 
 .lede.vs{font-weight:700;color:var(--ink)}
 .lede.vs span{color:var(--gold-text);margin-inline:6px}
+
+/* ===== harmony pass ===== */
+section{padding-block:clamp(64px,9vw,104px)}
+.routes{padding-top:clamp(64px,9vw,104px)}
+/* one heading pattern: label, gold rule, headline */
+.head.center .label::after{content:"";display:block;width:48px;height:3px;border-radius:2px;background:var(--aqua);margin:14px auto 0}
+/* alternating backgrounds */
+.routes{background:var(--bg-2)}
+.serve{background:var(--bg)}
+.coaches.path2{background:var(--bg-2)}
+.method{background:var(--bg)}
+.about-band{background:var(--bg-2)}
+/* path color coding */
+.serve{border-top:6px solid var(--band)}
+.serve .head .label{color:var(--ink)}
+.serve .head.center .label::after{background:var(--band)}
+.coaches.path2{border-top:6px solid var(--aqua)}
+.path2 .head .label{color:var(--gold-text)}
+.coaches.path2 .channels{background:var(--bg)}
+.door.ent{box-shadow:inset 0 6px 0 var(--teal)}
+.door.coach{background:var(--bg);box-shadow:inset 0 0 0 1.5px var(--line),inset 0 6px 0 var(--aqua)}
+.serve .eprods em,.serve .cgroup h3{color:var(--ink)}
+/* matching cards */
+.story,.cgroup,.eprods div,.case,.channels,.roster li,.tstep,.door{border-radius:14px}
+.method .steps li{border-top-color:var(--band)}
 </style>
 
 </head>
@@ -487,7 +512,7 @@ body::before{background:var(--band)}
       </div>
       </div>
       <div class="cta-row">
-        <a class="btn aqua" id="ent-assess" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Schedule an assessment call →</a>
+        <a class="btn ink" id="ent-assess" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Schedule an assessment call →</a>
       </div>
     </div>
   </section>

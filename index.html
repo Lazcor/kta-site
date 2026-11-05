@@ -329,6 +329,26 @@ body::before{background:var(--band)}
 .prod p{color:var(--soft);font-size:17px;line-height:1.5}
 .prod .btn{margin-top:auto}
 @media (max-width:760px){.prods{grid-template-columns:1fr}}
+
+.dprods{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.dprods li{font-weight:700;font-size:13.5px;padding:6px 11px;border-radius:999px}
+.door.ent .dprods li{background:var(--band-line);color:var(--on-band)}
+.door.coach .dprods li{background:var(--bg);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.pathsub{margin-top:clamp(36px,5vw,52px)}
+.psub-h{font-weight:800;font-size:clamp(22px,2.8vw,28px);text-align:center;margin-bottom:18px}
+.eprods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.eprods div{background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.eprods .feat{grid-column:1 / -1;background:var(--band);border-color:var(--band);color:var(--on-band)}
+.eprods .feat span{color:var(--band-soft)}
+.eprods .feat em{color:var(--aqua)}
+.eprods b{font-weight:800;font-size:18px}
+.eprods span{font-size:15.5px;color:var(--soft);line-height:1.45}
+.eprods em{font-style:normal;font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+@media (max-width:960px){.eprods{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.eprods{grid-template-columns:1fr}}
+.serve .cgroup{background:var(--bg)}
+.coaches.path2{background:var(--bg)}
+.coaches.path2 .channels{background:var(--bg-2)}
 </style>
 
 </head>
@@ -337,10 +357,10 @@ body::before{background:var(--band)}
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Knowledge Transfer Advisors home"><img src="data:image/jpeg;base64,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" alt="KTA. People, Knowledge, Value." width="800" height="171"></a>
     <nav class="nav" aria-label="Main">
-      <a class="link" href="#method">How we do it</a>
-      <a class="link" href="#create">What we create</a>
-      <a class="link" href="#proof">Results</a>
+      <a class="link" href="#enterprise">Enterprise</a>
       <a class="link" href="#coaches">Coaches</a>
+      <a class="link" href="#method">How we do it</a>
+      <a class="link" href="#proof">Results</a>
       <a class="link" href="#about">About</a>
       <a class="btn aqua" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Book a call</a>
     </nav>
@@ -387,46 +407,60 @@ body::before{background:var(--band)}
     <div class="wrap">
       <div class="head center">
         <p class="label">Who we serve</p>
-        <h2>Two ways we transfer knowledge.</h2>
+        <h2>Choose your path.</h2>
       </div>
       <div class="doors">
         <a class="door ent" id="route-enterprise" href="#enterprise">
           <h3>Enterprise &amp; Executive</h3>
           <p>Scale your knowledge into business intelligence that increases value.</p>
-          <span class="go"><i aria-hidden="true">→</i>Enterprise services</span>
+          <ul class="dprods"><li>Proprietary Design</li><li>Executive Advisory</li><li>Workshops</li><li>Academy Build</li><li>Fractional Knowledge Officer</li></ul>
+          <span class="go"><i aria-hidden="true">→</i>Enterprise path</span>
         </a>
         <a class="door coach" id="route-sme" href="#coaches">
           <h3>Subject Matter Experts &amp; Coaches</h3>
           <p>For coaches, consultants, and SMEs. Grow the digital business behind your expertise.</p>
-          <span class="go"><i aria-hidden="true">→</i>Digital Business Coaching</span>
+          <ul class="dprods"><li>Digital Business Coaching for Coaches</li></ul>
+          <span class="go"><i aria-hidden="true">→</i>Coaches path</span>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="method" id="method">
+  <section class="serve" id="enterprise">
     <div class="wrap">
       <div class="head center">
-        <p class="label">The Knowledge Transfer Method</p>
-        <h2>How we transfer knowledge.</h2>
-        <p class="lede">Five stages move what you know from information to value. Nothing gets rebuilt from scratch.</p>
+        <p class="label">Path 1 · Enterprise &amp; Executive</p>
+        <h2>Scale your knowledge into business intelligence that increases value.</h2>
       </div>
-      <ol class="steps">
-        <li><b>Gather</b><span>Knowledge, data, expertise, and materials get collected first. What's missing gets found.</span></li>
-        <li><b>Filter and Organize</b><span>Raw information becomes a clear, logical framework. What doesn't matter gets cut.</span></li>
-        <li><b>Communicate</b><span>The work gets translated into the language, visuals, and formats the audience needs.</span></li>
-        <li><b>Create</b><span>Intelligence and assets get built. A program, an academy, a framework. Made to be used.</span></li>
-        <li><b>Capitalize</b><span>The asset gets priced, packaged, and deployed to produce measurable value.</span></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="create">
-    <div class="wrap">
-      <div class="head center">
-        <p class="label">What we create</p>
-        <h2>Intelligence to decide. Assets to scale.</h2>
+      <div class="story two">
+        <div class="pb">
+          <span class="tag">The problem</span>
+          <h3>Your best knowledge lives in a few people's heads.</h3>
+          <ul>
+            <li>New hires take months to ramp</li>
+            <li>Training doesn't stick</li>
+            <li>Teams repeat the same mistakes</li>
+            <li>Data is everywhere and decisions still stall</li>
+          </ul>
+        </div>
+        <div class="sl">
+          <span class="tag">The solution</span>
+          <h3>We turn it into a system you own.</h3>
+          <p>We improve communication, marketing and sales, customer journey, operations and training through information and knowledge strategy that turns expertise into a reusable asset.</p>
+        </div>
       </div>
+      <div class="pathsub">
+        <h3 class="psub-h">Products</h3>
+        <div class="eprods">
+          <div class="feat"><em>Design</em><b>Proprietary Design</b><span>Knowledge systems, programs, and platforms designed around your organization's own expertise.</span></div>
+          <div><em>Advise</em><b>Executive Advisory</b><span>Strategy sessions with leaders on knowledge, AI, and transformation.</span></div>
+          <div><em>Train</em><b>Workshops</b><span>Hands-on sessions that turn your team's expertise into a shared method.</span></div>
+          <div><em>Build</em><b>Academy Build</b><span>A learning management system and curriculum your people actually use.</span></div>
+          <div><em>Lead</em><b>Fractional Knowledge Officer</b><span>Ongoing leadership of your knowledge strategy, without a full-time hire.</span></div>
+        </div>
+      </div>
+      <div class="pathsub">
+        <h3 class="psub-h">What we create</h3>
       <div class="create">
         <div class="cgroup">
           <h3>Intelligence</h3>
@@ -448,35 +482,72 @@ body::before{background:var(--band)}
           <p class="cformats">Webinars. eBooks. Audio and Video content. Coursework. Workshops. Seminars. Retreats. Academies. Apps.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="serve" id="enterprise">
-    <div class="wrap">
-      <div class="head center">
-        <p class="label">Enterprise and Executive</p>
-        <h2>Scale your knowledge into business intelligence that increases value.</h2>
-      </div>
-      <div class="story two">
-        <div class="pb">
-          <span class="tag">The problem</span>
-          <h3>Your best knowledge lives in a few people's heads.</h3>
-          <ul>
-            <li>New hires take months to ramp</li>
-            <li>Training doesn't stick</li>
-            <li>Teams repeat the same mistakes</li>
-            <li>Data is everywhere and decisions still stall</li>
-          </ul>
-        </div>
-        <div class="sl">
-          <span class="tag">The solution</span>
-          <h3>We turn it into a system you own.</h3>
-          <p>We improve communication, marketing and sales, customer journey, operations and training through information and knowledge strategy that turns expertise into a reusable asset.</p>
-        </div>
       </div>
       <div class="cta-row">
         <a class="btn aqua" id="ent-assess" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Schedule an assessment call →</a>
       </div>
+    </div>
+  </section>
+
+  <section class="coaches path2" id="coaches">
+    <div class="wrap">
+      <div class="head center">
+        <p class="label">Path 2 · Subject Matter Experts &amp; Coaches</p>
+        <h2>Digital Business Coaching for Coaches</h2>
+        <p class="lede">You're great at what you do. Your business still runs on your hours.</p>
+      </div>
+      <div class="story">
+        <div class="pb">
+          <span class="tag">The problem</span>
+          <h3>Your income stops when you stop.</h3>
+          <ul>
+            <li>Leads go cold before they buy</li>
+            <li>One offer, one price, one way to work with you</li>
+            <li>No follow-up, no referrals, no community</li>
+          </ul>
+        </div>
+        <div class="sl">
+          <span class="tag">The solution</span>
+          <h3>We grow the digital business around your expertise.</h3>
+          <p>We teach you the systems and strategies that improve your sales, marketing, customer journey, and offers. More revenue streams. More profit.</p>
+        </div>
+        <div class="pf">
+          <span class="tag">The proof</span>
+          <h3>Built with experts like you.</h3>
+          <ul>
+            <li><b>1,300+</b> coaches worked with</li>
+            <li>Businesses grown for celebrity trainers and NYT bestsellers</li>
+          </ul>
+        </div>
+      </div>
+      <div class="channels">
+        <span class="label">What top coaches already leverage</span>
+        <ul class="chips">
+          <li>Marketing</li><li>Testimonials</li><li>Reviews</li><li>Follow-up</li><li>Sales</li>
+          <li>Offers</li><li>Frictionless sales</li><li>Customer journey</li><li>Academy</li><li>Community</li>
+          <li>Connect the dots</li><li>Referrals</li><li>Revenue streams</li><li>Automation</li><li>Leveraging AI</li>
+        </ul>
+        <div class="cta-row" style="margin-top:20px">
+          <a class="btn aqua" id="coach-check" href="/check.html">Take the Knowledge Check →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="method" id="method">
+    <div class="wrap">
+      <div class="head center">
+        <p class="label">The Knowledge Transfer Method</p>
+        <h2>How we transfer knowledge.</h2>
+        <p class="lede">Five stages move what you know from information to value. Nothing gets rebuilt from scratch.</p>
+      </div>
+      <ol class="steps">
+        <li><b>Gather</b><span>Knowledge, data, expertise, and materials get collected first. What's missing gets found.</span></li>
+        <li><b>Filter and Organize</b><span>Raw information becomes a clear, logical framework. What doesn't matter gets cut.</span></li>
+        <li><b>Communicate</b><span>The work gets translated into the language, visuals, and formats the audience needs.</span></li>
+        <li><b>Create</b><span>Intelligence and assets get built. A program, an academy, a framework. Made to be used.</span></li>
+        <li><b>Capitalize</b><span>The asset gets priced, packaged, and deployed to produce measurable value.</span></li>
+      </ol>
     </div>
   </section>
 
@@ -530,89 +601,6 @@ body::before{background:var(--band)}
         <li>Private Equity Businesses</li>
         <li>Start-Ups and SMBs</li>
       </ul>
-    </div>
-  </section>
-
-  <section class="coaches" id="coaches">
-    <div class="wrap">
-      <div class="head center">
-        <p class="label">Subject Matter Experts · Coaches, Consultants, SMEs</p>
-        <h2>Digital Business Coaching</h2>
-        <p class="lede">You're great at what you do. Your business still runs on your hours.</p>
-      </div>
-      <div class="story">
-        <div class="pb">
-          <span class="tag">The problem</span>
-          <h3>Your income stops when you stop.</h3>
-          <ul>
-            <li>Leads go cold before they buy</li>
-            <li>One offer, one price, one way to work with you</li>
-            <li>No follow-up, no referrals, no community</li>
-          </ul>
-        </div>
-        <div class="sl">
-          <span class="tag">The solution</span>
-          <h3>We grow the digital business around your expertise.</h3>
-          <p>We teach you the systems and strategies that improve your sales, marketing, customer journey, and offers. More revenue streams. More profit.</p>
-        </div>
-        <div class="pf">
-          <span class="tag">The proof</span>
-          <h3>Built with experts like you.</h3>
-          <ul>
-            <li><b>1,300+</b> coaches worked with</li>
-            <li>Businesses grown for celebrity trainers and NYT bestsellers</li>
-          </ul>
-        </div>
-      </div>
-      <div class="channels">
-        <span class="label">What top coaches already leverage</span>
-        <ul class="chips">
-          <li>Marketing</li><li>Testimonials</li><li>Reviews</li><li>Follow-up</li><li>Sales</li>
-          <li>Offers</li><li>Frictionless sales</li><li>Customer journey</li><li>Academy</li><li>Community</li>
-          <li>Connect the dots</li><li>Referrals</li><li>Revenue streams</li><li>Automation</li><li>Leveraging AI</li>
-        </ul>
-        <div class="cta-row" style="margin-top:20px">
-          <a class="btn aqua" id="coach-check" href="/check.html">Take the Knowledge Check →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="products" style="padding-bottom:0">
-    <div class="wrap">
-      <div class="head center">
-        <p class="label">Products</p>
-        <h2>Our products.</h2>
-      </div>
-      <div class="prods">
-        <div class="prod">
-          <h3>Proprietary Design</h3>
-          <p>Knowledge systems, programs, and platforms designed around your organization's own expertise.</p>
-          <a class="btn ink" id="prod-design" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener">Book a call →</a>
-        </div>
-        <div class="prod">
-          <h3>Digital Business Coaching for Coaches</h3>
-          <p>We grow the digital business behind coaches, consultants, and SMEs. More revenue streams. More profit.</p>
-          <a class="btn aqua" id="prod-dbc" href="/check.html">Take the Knowledge Check →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="work">
-    <div class="wrap">
-      <div class="engage" style="margin-top:0">
-        <div class="head center">
-          <p class="label">Engagements</p>
-          <h2>Ways to work with us.</h2>
-        </div>
-        <div class="eg">
-          <div><em>Advise</em><b>Executive Advisory</b><span>Strategy sessions with leaders on knowledge, AI, and transformation.</span></div>
-          <div><em>Train</em><b>Workshops</b><span>Hands-on sessions that turn your team's expertise into a shared method.</span></div>
-          <div><em>Build</em><b>Academy Build</b><span>A learning management system and curriculum your people actually use.</span></div>
-          <div><em>Lead</em><b>Fractional Knowledge Officer</b><span>Ongoing leadership of your knowledge strategy, without a full-time hire.</span></div>
-        </div>
-      </div>
     </div>
   </section>
 

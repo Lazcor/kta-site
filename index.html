@@ -431,6 +431,21 @@ section{padding-block:clamp(64px,9vw,104px)}
 .flinks{display:flex;gap:20px}
 .lin{font-weight:700;color:var(--teal);text-decoration:none}
 .lin:hover{text-decoration:underline}
+
+/* path card headers as buttons */
+.dhead{display:flex;align-items:center;gap:16px}
+.dhead i{font-style:normal;flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--aqua);color:var(--on-aqua);font-size:24px;font-weight:800;transition:transform .2s}
+.door:hover .dhead i{transform:translateX(4px)}
+.routes .door .dhead h3{font-size:clamp(30px,4vw,44px)}
+.dwho{font-weight:700;font-size:15px;letter-spacing:.02em}
+.door.ent .dwho{color:var(--aqua)}
+.door.coach .dwho{color:var(--gold-text)}
+/* method arrow flow */
+.steps li{position:relative}
+.steps li:not(:last-child)::after{content:"→";position:absolute;right:-17px;top:-17px;font-weight:800;font-size:22px;color:var(--ink);background:var(--bg);padding:0 2px;line-height:1}
+@media (max-width:960px){.steps{grid-template-columns:1fr;gap:34px}.steps li:not(:last-child)::after{content:"↓";right:auto;left:0;top:auto;bottom:-30px}}
+/* roster on simplified results */
+.roster.dark li{border-radius:14px}
 </style>
 
 </head>
@@ -489,16 +504,16 @@ section{padding-block:clamp(64px,9vw,104px)}
       </div>
       <div class="doors">
         <a class="door ent" id="route-enterprise" href="#enterprise">
-          <h3>Enterprise Experts</h3>
+          <div class="dhead"><i aria-hidden="true">→</i><h3>Enterprise Experts</h3></div>
+          <p class="dwho">For executive leaders, subject matter experts, and organizations</p>
           <p>Scale your knowledge into business intelligence that increases value.</p>
           <p class="dline">Proprietary Design · Executive Advisory · Workshops · Build Outs · Fractional Knowledge Officer</p>
-          <span class="go"><i aria-hidden="true">→</i>Enterprise Experts</span>
         </a>
         <a class="door coach" id="route-sme" href="#coaches">
-          <h3>Coaches</h3>
+          <div class="dhead"><i aria-hidden="true">→</i><h3>Coaches</h3></div>
+          <p class="dwho">For coaches, consultants, speakers, and trainers</p>
           <p>Grow the digital business behind your expertise.</p>
           <p class="dline">Digital Business Ecosystem for Coaches</p>
-          <span class="go"><i aria-hidden="true">→</i>Coaches</span>
         </a>
       </div>
     </div>
@@ -600,7 +615,7 @@ section{padding-block:clamp(64px,9vw,104px)}
   <section class="impact" id="proof">
     <div class="wrap">
       <div class="head center">
-        <p class="label">Proof, not adjectives</p>
+        <span class="kdiv" aria-hidden="true" style="margin:0 auto"></span>
         <h2>Results.</h2>
       </div>
       <dl class="stats">
@@ -636,6 +651,17 @@ section{padding-block:clamp(64px,9vw,104px)}
           <p class="res">5,000+ professionals trained</p>
         </article>
       </div>
+      <p class="roster-h">The rooms this work was built for</p>
+      <ul class="roster dark">
+        <li>Top Personal Development Companies</li>
+        <li>Top Ranked Speakers</li>
+        <li>NYT Bestsellers</li>
+        <li>Olympic Gold Medal Coaches</li>
+        <li>Military Training</li>
+        <li>Fortune 100 Partners</li>
+        <li>Private Equity Businesses</li>
+        <li>Start-Ups and SMBs</li>
+      </ul>
     </div>
   </section>
 

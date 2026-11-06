@@ -9,12 +9,12 @@
 /* Layout concept: one line runs the page. Ten nodes on a spine, from "what you know" to "what it earns".
    A yes fills the node and the line below it. A no breaks the line. The sticky bar mirrors the same line. */
 :root{
-  --paper:#EDE4CF; --paper-2:#F6F0E0; --paper-3:#E2D7BC;
+  --paper:#F3F7F6; --paper-2:#FFFFFF; --paper-3:#E4EEEC;
   --ink:#123B40; --ink-deep:#0B2A2E; --soft:#2F5559; --muted:#55716F;
-  --rule:#B9AE90; --aqua:#0E6B66; --aqua-bright:#2BB5A6; --aqua-wash:rgba(43,181,166,.16);
-  --on-ink:#F6F0E0; --on-aqua:#06292A;
-  --stage:#0B2A2E; --on-stage:#F6F0E0; --stage-rule:#2F5559; --stage-aqua:#5FD6C4;
-  --shadow:rgba(11,42,46,.14); --lift:#FBF7EC;
+  --rule:#C2D4D1; --aqua:#0E6B66; --aqua-bright:#2BB5A6; --aqua-wash:rgba(43,181,166,.16);
+  --on-ink:#FFFFFF; --on-aqua:#06292A;
+  --stage:#0B2A2E; --on-stage:#F2F7F6; --stage-rule:#2F5559; --stage-aqua:#5FD6C4;
+  --shadow:rgba(11,42,46,.14); --lift:#E6F3F1;
   --display:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
   --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
   --mono:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
@@ -22,20 +22,20 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --paper:#0A2125; --paper-2:#0F2D32; --paper-3:#071A1D;
-    --ink:#E9E0C9; --ink-deep:#F6F0E0; --soft:#C5CDBF; --muted:#93A8A2;
+    --ink:#DCE8E6; --ink-deep:#F2F7F6; --soft:#B4C7C4; --muted:#93A8A2;
     --rule:#2C4F52; --aqua:#6FD9C8; --aqua-bright:#3CC4B2; --aqua-wash:rgba(60,196,178,.16);
     --on-ink:#0A2125; --on-aqua:#06292A;
-    --stage:#061619; --on-stage:#F6F0E0; --stage-rule:#2C4F52; --stage-aqua:#5FD6C4;
+    --stage:#061619; --on-stage:#F2F7F6; --stage-rule:#2C4F52; --stage-aqua:#5FD6C4;
     --shadow:rgba(0,0,0,.4); --lift:#18424A;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --paper:#0A2125; --paper-2:#0F2D32; --paper-3:#071A1D;
-  --ink:#E9E0C9; --ink-deep:#F6F0E0; --soft:#C5CDBF; --muted:#93A8A2;
+  --ink:#DCE8E6; --ink-deep:#F2F7F6; --soft:#B4C7C4; --muted:#93A8A2;
   --rule:#2C4F52; --aqua:#6FD9C8; --aqua-bright:#3CC4B2; --aqua-wash:rgba(60,196,178,.16);
   --on-ink:#0A2125; --on-aqua:#06292A;
-  --stage:#061619; --on-stage:#F6F0E0; --stage-rule:#2C4F52; --stage-aqua:#5FD6C4;
+  --stage:#061619; --on-stage:#F2F7F6; --stage-rule:#2C4F52; --stage-aqua:#5FD6C4;
   --shadow:rgba(0,0,0,.4); --lift:#18424A;
   color-scheme:dark;
 }
@@ -299,6 +299,7 @@ footer .mono{font-size:10.5px}
 .hero h1,.hero > .lede,main section > .eyebrow,main section > h2,main section > .lede,.offer > .eyebrow,.offer > h2,.offer > .lede{text-align:center;margin-inline:auto}
 .flow.chips{justify-content:center}
 .askpop[hidden]{display:none}
+.bio{grid-template-columns:1fr}
 .ask-opts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:2px}
 .askpop .ask-o{align-self:auto;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:9px 4px;border-radius:999px;background:transparent;color:var(--on-stage);box-shadow:inset 0 0 0 1.5px var(--stage-rule);cursor:pointer}
 .askpop .ask-o[aria-pressed="true"]{background:var(--stage-aqua);color:var(--on-aqua);box-shadow:none}
@@ -373,15 +374,6 @@ footer .mono{font-size:10.5px}
     <h1>Build your <em>digital business ecosystem.</em></h1>
     <p class="lede">We teach you the systems and strategies that improve your sales, marketing, customer journey, and offers. More revenue streams. More profit.</p>
 
-    <div class="vframe" id="vframe">
-      <video id="vsl" controls playsinline preload="metadata" hidden></video>
-      <div class="vslot" id="vslot">
-        <span class="mono">Video slot · 1 min</span>
-        <div>
-          <b>Your video goes here.</b>
-        </div>
-      </div>
-    </div>
 
     <p class="hook under-video">Follow the digital strategy map below and isolate what's missing in your business.</p>
 
@@ -628,7 +620,6 @@ footer .mono{font-size:10.5px}
           </div>
           <p class="result" id="result"></p>
           <p class="result-note" id="copy-note">Paste your answers into the booking form.</p>
-          
         </div>
       </div>
 
@@ -638,15 +629,6 @@ footer .mono{font-size:10.5px}
           <div>
             <p class="mono ms-label">Next step</p>
             <h3 class="book-h">Book a call to go over your Digital Business Plan.</h3>
-          </div>
-          <div class="vframe" id="vframe2">
-            <video id="vsl2" controls playsinline preload="metadata" hidden></video>
-            <div class="vslot" id="vslot2">
-              <span class="mono">Video slot · Who I am and what I do</span>
-              <div>
-                <b>Your second video goes here.</b>
-              </div>
-            </div>
           </div>
           <div class="prequal">
             <p class="mono pq-tag">Pre-Qualified</p>
@@ -680,7 +662,6 @@ footer .mono{font-size:10.5px}
               <a class="btn aqua" id="book-go" href="https://calendly.com/lazcorbusiness/30min" target="_blank" rel="noopener" hidden>Pick your time →</a>
               <span class="note" id="gate-note">Next you'll pick a time on the calendar.</span>
             </div>
-            
           </form>
         </div>
       </div>
@@ -689,22 +670,13 @@ footer .mono{font-size:10.5px}
     </div>
   </section>
 
-
   <section class="wrap">
     <p class="eyebrow">Who built this</p>
     <h2>We help coaches <em>build their digital business.</em></h2>
     <div class="bio">
-      <div class="bio-pic">
-        <img id="pic" alt="Laz Cor" hidden>
-        <div class="pslot" id="pslot">
-          <span class="mono">Photo slot</span>
-          <b>Your photo goes here.</b>
-        </div>
-      </div>
       <div class="bio-text">
         <p class="who">Laz Cor</p>
         <p class="role">Founder and Principal, Knowledge Transfer Advisors</p>
-        <p class="b"><a href="https://www.linkedin.com/in/laz-cor-ai/" target="_blank" rel="noopener" style="font-weight:700;color:var(--aqua)">Connect on LinkedIn →</a></p>
         <p class="b">I am an Information Nerd.</p>
         <p class="b">Military Intelligence taught me to turn incomplete information into actionable intelligence. Corporate training taught me to turn knowledge into performance. Digital products taught me scale.</p>
         <p class="b">Every role added a capability. They all stack into one. I build the digital business behind coaches.</p>
@@ -1157,22 +1129,6 @@ footer .mono{font-size:10.5px}
   }catch(e){}
 
   function $(id){ return document.getElementById(id); }
-  var stages = Array.prototype.slice.call(document.querySelectorAll('.stage'));
-  var WORDS = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty'];
-  var NW = WORDS[N] || String(N);
-  (function(){
-    var tl = $('tline');
-    for(var k = 0; k < N; k++){
-      if(k) tl.appendChild(el('span', 'tseg'));
-      tl.appendChild(el('span', 'tnode'));
-    }
-    Array.prototype.forEach.call(document.querySelectorAll('.n-total'), function(t){ t.textContent = N; });
-  })();
-  var tnodes = Array.prototype.slice.call(document.querySelectorAll('.tnode'));
-  var groups = Array.prototype.slice.call(document.querySelectorAll('[data-g]'));
-  var NOTE = $('copy-note').textContent;
-  var GATE_NOTE = $('gate-note').textContent;
-
   var LEAD_TO = 'https://formsubmit.co/ajax/raizupaibiz@gmail.com';
   function sendLead(kind, extra){
     var s = summary();
@@ -1189,6 +1145,21 @@ footer .mono{font-size:10.5px}
       fetch(LEAD_TO, {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(data)}).catch(function(){});
     }catch(e){}
   }
+  var stages = Array.prototype.slice.call(document.querySelectorAll('.stage'));
+  var WORDS = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty'];
+  var NW = WORDS[N] || String(N);
+  (function(){
+    var tl = $('tline');
+    for(var k = 0; k < N; k++){
+      if(k) tl.appendChild(el('span', 'tseg'));
+      tl.appendChild(el('span', 'tnode'));
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.n-total'), function(t){ t.textContent = N; });
+  })();
+  var tnodes = Array.prototype.slice.call(document.querySelectorAll('.tnode'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('[data-g]'));
+  var NOTE = $('copy-note').textContent;
+  var GATE_NOTE = $('gate-note').textContent;
 
   function summary(){
     var yes = 0, answered = 0, gaps = [];
@@ -1398,6 +1369,11 @@ footer .mono{font-size:10.5px}
     }catch(e){ fallback(); }
   });
 
+  TESTIMONIALS.forEach(function(t, k){
+    var n = k + 1;
+    if(t.name) $('tvcap' + n).textContent = t.name;
+    if(t.src){ var tv = $('tv' + n); tv.src = t.src; tv.hidden = false; $('tvslot' + n).hidden = true; }
+  });
 
   if(PHOTO_SRC){
     var ph = $('pic');
